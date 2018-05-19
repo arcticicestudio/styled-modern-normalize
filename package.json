@@ -1,0 +1,64 @@
+{
+  "name": "styled-modern-normalize",
+  "version": "0.1.0",
+  "description": "modern-normalize.css for styled-components",
+  "author": {
+    "name": "Arctic Ice Studio",
+    "email": "development@arcticicestudio.com",
+    "url": "http://arcticicestudio.com"
+  },
+  "homepage": "https://github.com/arcticicestudio/styled-modern-normalize",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticicestudio/styled-modern-normalize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arcticicestudio/styled-modern-normalize/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "styled",
+    "components",
+    "modern",
+    "normalize",
+    "css",
+    "react",
+    "styled",
+    "import",
+    "export"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "clean": "del build dist",
+    "dev": "npm run clean && babel --source-maps --watch src --out-dir build",
+    "dist": "npm run clean && cross-env NODE_ENV=production babel src --out-dir dist",
+    "lint:js": "eslint . src",
+    "lint:md": "remark --no-stdout *.md src .github",
+    "lint": "npm run lint:js && npm run lint:md",
+    "prepublishOnly": "npm run lint && npm run dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "8.2.3",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "5.1.5",
+    "del-cli": "1.1.0",
+    "eslint": "4.19.1",
+    "eslint-config-arcticicestudio-base": "0.2.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "prettier": "^1.12.1",
+    "react": "^16.3.2",
+    "remark-cli": "5.0.0",
+    "remark-preset-lint-arcticicestudio": "0.1.0",
+    "styled-components": "^3.2.6"
+  },
+  "peerDependencies": {
+    "react": ">= 0.14.0 < 17.0.0-0",
+    "styled-components": "^2.0.0 || ^3.2.6"
+  }
+}
