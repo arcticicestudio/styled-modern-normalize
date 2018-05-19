@@ -6,7 +6,7 @@
 
 <p align="center"><img src="https://circleci.com/favicon.ico" width=24 height=24/> <a href="https://circleci.com/gh/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a> <img src="https://cdn.travis-ci.org/images/favicon-c566132d45ab1a9bcae64d8d90e4378a.svg" width=24 height=24/> <a href="https://travis-ci.org/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/travis/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.0.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.4.0-5E81AC.svg?style=flat-square"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.4.0-5E81AC.svg?style=flat-square"/></a></p>
 
 A common import method for `modern-normalize.css` is to use [unnamed imports][mdn-import] which works fine for projects with _vanilla_ CSS or pre-processors workflows like Sass/Less and a bundler like [webpack][], but it doesn't make use of the advantages of CSS-in-JS libraries like _styled-components_, e.g. auto-prefixing and CSS optimizing.
 
