@@ -10,7 +10,7 @@
 /**
  * @file Exports the CSS defintions and compatible version of the "modern-normalize" package.
  * This is the main entry point of the package.
- * @version 0.1.0
+ * @version 0.2.0
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @copyright 2018-present Arctic Ice Studio <development@arcticicestudio.com>
