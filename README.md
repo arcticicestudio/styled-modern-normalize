@@ -6,13 +6,13 @@
 
 <p align="center"><img src="https://circleci.com/favicon.ico" width=24 height=24/> <a href="https://circleci.com/gh/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a> <img src="https://cdn.travis-ci.org/images/favicon-c566132d45ab1a9bcae64d8d90e4378a.svg" width=24 height=24/> <a href="https://travis-ci.org/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/travis/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.4.0-5E81AC.svg?style=flat-square"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.5.0-5E81AC.svg?style=flat-square"/></a></p>
 
 A common import method for `modern-normalize.css` is to use [unnamed imports][mdn-import] which works fine for projects with _vanilla_ CSS or pre-processors workflows like Sass/Less and a bundler like [webpack][], but it doesn't make use of the advantages of CSS-in-JS libraries like _styled-components_, e.g. auto-prefixing and CSS optimizing.
 
 [styled-modern-normalize][npm-styled-modern-normalize] is a proxy package of [modern-normalize.css][npm-modern-normalize] for [styled-components][] to provide the CSS as template literal with interpolation by using _styled-component_'s [`css`][sc-doc-api-css] API function. This allows to import and use it via [`injectGlobal`][sc-doc-api-injectglobal] or any other styled component.
 
-The package is based on and compatible with _modern-normalize.css_ version 0.4.0.
+The package is based on and compatible with _modern-normalize.css_ version 0.5.0.
 
 ## Getting Started
 
@@ -84,7 +84,7 @@ The version of _modern-normalize.css_ this package is currently based is exporte
 import { MODERN_NORMALIZE_VERSION } from "styled-modern-normalize";
 
 // Example:
-console.log(MODERN_NORMALIZE_VERSION); // "0.4.0"
+console.log(MODERN_NORMALIZE_VERSION); // "0.5.0"
 ```
 
 ### Development Workflow

@@ -22,7 +22,7 @@
 
 import { css } from "styled-components";
 
-const MODERN_NORMALIZE_VERSION = "0.4.0";
+const MODERN_NORMALIZE_VERSION = "0.5.0";
 
 const modernNormalize = css`
   html {
@@ -42,6 +42,7 @@ const modernNormalize = css`
 
   html {
     line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -51,11 +52,6 @@ const modernNormalize = css`
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
   }
 
   hr {
@@ -166,10 +162,6 @@ const modernNormalize = css`
   ::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit;
-  }
-
-  details {
-    display: block;
   }
 
   summary {
