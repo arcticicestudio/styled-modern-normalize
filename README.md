@@ -6,13 +6,13 @@
 
 <p align="center"><img src="https://circleci.com/favicon.ico" width=24 height=24/> <a href="https://circleci.com/gh/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/circleci/project/github/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a> <img src="https://cdn.travis-ci.org/images/favicon-c566132d45ab1a9bcae64d8d90e4378a.svg" width=24 height=24/> <a href="https://travis-ci.org/arcticicestudio/styled-modern-normalize"><img src="https://img.shields.io/travis/arcticicestudio/styled-modern-normalize/develop.svg?style=flat-square"/></a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.5.0-5E81AC.svg?style=flat-square"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styled-modern-normalize/blob/develop/CHANGELOG.md#010"><img src="https://img.shields.io/badge/Changelog-0.1.0-5E81AC.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/styleguide-javascript"><img src="https://img.shields.io/badge/modern--normalize.css-0.5.0-5E81AC.svg?style=flat-square"/></a> <a href="https://www.styled-components.com"><img src="https://img.shields.io/badge/styled--components-v2_%7C%7C_v3_%7C%7C_v4-5E81AC.svg?style=flat-square"/></a></p>
 
 A common import method for `modern-normalize.css` is to use [unnamed imports][mdn-import] which works fine for projects with _vanilla_ CSS or pre-processors workflows like Sass/Less and a bundler like [webpack][], but it doesn't make use of the advantages of CSS-in-JS libraries like _styled-components_, e.g. auto-prefixing and CSS optimizing.
 
 [styled-modern-normalize][npm-styled-modern-normalize] is a proxy package of [modern-normalize.css][npm-modern-normalize] for [styled-components][] to provide the CSS as template literal with interpolation by using _styled-component_'s [`css`][sc-doc-api-css] API function. This allows to import and use it via [`injectGlobal`][sc-doc-api-injectglobal] or any other styled component.
 
-The package is based on and compatible with _modern-normalize.css_ version 0.5.0.
+The package is based on and compatible with _modern-normalize.css_ version 0.5.0. The provided styles are compatible with _styled-components_ v2, v3 and v4.
 
 ## Getting Started
 
@@ -68,8 +68,31 @@ import modernNormalize from "styled-modern-normalize";
 
 // …or via named export.
 import { modernNormalize } from "styled-modern-normalize";
+```
 
-// Usage with "injectGlobal".
+To inject the styles when using _styled-components_ v4 the [`createGlobalStyle`][sc-doc-api-createglobalstyle] API function can be used that generates a `StyledComponent` Reach component:
+
+```js
+// Usage with the latest "styled-components" v4.
+import { createGlobalStyle } from "styled-components";
+
+const ModernNormalize = createGlobalStyle`
+  ${modernNormalize}
+  /* ... */
+`;
+
+// Use the generated component in your rendering logic to inject the styles.
+/* ... */
+<React.Fragment>
+  <ModernNormalize />
+</React.Fragment>;
+/* ... */
+```
+
+When using _styled-components_ v2 or v3 the styles can be injected using the [`injectGlobal`][sc-doc-api-injectglobal] API:
+
+```js
+// Usage with "styled-components" v2 or v3.
 import { injectGlobal } from "styled-components";
 
 const cssBaseline = injectGlobal`
@@ -168,6 +191,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [prettier]: https://prettier.io/docs/en/editors
 [prettier-doc-editors]: https://prettier.io/docs/en/editors
 [react]: https://reactjs.org
+[sc-doc-api-createglobalstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [sc-doc-api-css]: https://www.styled-components.com/docs/api#css
 [sc-doc-api-injectglobal]: https://www.styled-components.com/docs/api#injectglobal
 [styled-components]: https://www.styled-components.com
